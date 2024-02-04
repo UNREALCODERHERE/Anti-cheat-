@@ -1,0 +1,23 @@
+// Example server-side detection (Java)
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerMoveEvent;
+
+public class AntiCheatListener implements Listener {
+    
+    @EventHandler
+    public void onPlayerMove(PlayerMoveEvent event) {
+        Player player = event.getPlayer();
+        // Check for speed hacks
+        if (isSpeedHack(player)) {
+            // Kick or ban player for speed hacking
+            player.kickPlayer("You have been kicked for suspected speed hacking.");
+        }
+    }
+    
+    private boolean isSpeedHack(Player player) {
+        // Logic to detect speed hacks
+        return false;
+    }
+}

@@ -1,0 +1,16 @@
+// Example reporting system (Java)
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+
+public class ReportCommand implements CommandExecutor {
+    
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (command.getName().equalsIgnoreCase("report")) {
+            // Logic to handle player reports
+            return true;
+        }
+        return false;
+    }
+}
